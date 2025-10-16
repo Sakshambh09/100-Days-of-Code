@@ -1,0 +1,35 @@
+// Count even and odd numbers in an array.
+// Show Sample Test Cases
+// Input 1:
+// 6
+// 1 2 3 4 5 6
+// Output 1:
+// Even=3, Odd=3
+// Input 2:
+// 4
+// 2 4 6 8
+// Output 2:
+// Even=4, Odd=0
+
+import java.util.*;
+
+class Q1 {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int evenCount = 0;
+        int oddCount = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+        System.out.println("Even=" + evenCount + ", Odd=" + oddCount);
+    }
+}
